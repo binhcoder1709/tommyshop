@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.admin-header {
+  display: flex;
+  align-items: center;
+}
+.header-logo {
+  background-color: rgb(38, 53, 68);
+  width: 15%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -1px 0.1px 1px 1px;
+}
+.header-logo h2 {
+  color: white;
+  font-size: x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.header-function {
+  width: 85%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0.1px 1px 1px;
+}
+.dropdown-notifi {
+  margin-left: 950px;
+  width: 20px;
+}
+.dropdown-notifi button {
+  /* width: 20px; */
+  height: 50px;
+  background-color: white;
+  color: black;
+  border: none;
+}
+.dropdown-notifi button:hover {
+  background-color: white;
+  color: black;
+}
+.dropdown-notifi button i {
+  color: black;
+}
+.dropdown-mess {
+  margin-left: 50px;
+}
+.dropdown-mess button {
+  height: 50px;
+  background-color: white;
+  color: black;
+  border: none;
+}
+.dropdown-mess button:hover {
+  background-color: white;
+  color: black;
+}
+.dropdown-mess button i {
+  color: black;
+}
+.dropdown {
+  margin-left: 10px;
+}
+.dropdown button {
+  height: 50px;
+  background-color: white;
+  color: black;
+  border: none;
+}
+.dropdown button:hover {
+  background-color: white;
+  color: black;
+}
+.dropdown button img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.section-content {
+  display: flex;
+  flex-direction: row;
+}
+.section-function {
+  width: 15%;
+  background-color: rgb(38, 53, 68);
+  height: 695px;
+  padding: 20px 0px;
+}
+.section-function a {
+  color: white;
+}
+.section-function a:hover {
+  color: white;
+}
+.all {
+  width: 100%;
+  text-align: center;
+}
+.card {
+  background-color: rgb(38, 53, 68);
+}
+.card-header {
+  background-color: rgb(38, 53, 68);
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(38, 53, 68);
+  border: none;
+}
+.account {
+  width: 100%;
+  text-align: center;
+}
+.section-table {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  padding: 20px 20px;
+}
+.section-table table {
+  text-align: center;
+}
+.insertuser {
+  /* background-color: antiquewhite; */
+  width: 100%;
+  position: fixed;
+}
+.insertuser-content form {
+  /* margin-left: -100px; */
+  display: flex;
+  flex-direction: column;
+  max-width: 100vh;
+}

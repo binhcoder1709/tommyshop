@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.9.0.1
+- https://www.phpmyadmin.net
+-
+- Máy chủ: sql203.infinityfree.com
+- Thời gian đã tạo: Th2 18, 2024 lúc 07:14 PM
+- Phiên bản máy phục vụ: 10.4.17-MariaDB
+- Phiên bản PHP: 7.2.22
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="if0_35234194_tommyshop" collation="utf8_unicode_ci" charset="utf8">
+            <pma:table name="administrator">
+                CREATE TABLE `administrator` (
+                  `id` int(10) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+                  `useradmin` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `passadmin` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `role` int(10) DEFAULT NULL,
+                  `image` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="dolcegabana">
+                CREATE TABLE `dolcegabana` (
+                  `id` int(10) NOT NULL AUTO_INCREMENT,
+                  `dgname` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `price` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `info` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `image` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="gucci">
+                CREATE TABLE `gucci` (
+                  `id` int(10) NOT NULL AUTO_INCREMENT,
+                  `gucciname` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `price` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `info` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `image` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="messages">
+                CREATE TABLE `messages` (
+                  `msg_id` int(11) NOT NULL AUTO_INCREMENT,
+                  `incoming_msg_id` int(255) NOT NULL,
+                  `outgoing_msg_id` int(255) NOT NULL,
+                  `msg` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+                  PRIMARY KEY (`msg_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="popular-product">
+                CREATE TABLE `popular-product` (
+                  `id` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+                  `name` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `mainname` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `time` int(2) DEFAULT NULL,
+                  `sold` int(5) DEFAULT NULL,
+                  `para` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="product">
+                CREATE TABLE `product` (
+                  `id` int(10) NOT NULL AUTO_INCREMENT,
+                  `productname` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `price` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `info` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `image` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `type` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="user">
+                CREATE TABLE `user` (
+                  `id` int(10) NOT NULL AUTO_INCREMENT,
+                  `nameuser` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `user` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+                  `pass` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+                  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+                  `phone` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+            <pma:table name="users">
+                CREATE TABLE `users` (
+                  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+                  `unique_id` int(255) NOT NULL,
+                  `fname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  `lname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  `img` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  `status` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  PRIMARY KEY (`user_id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Cơ sở dữ liệu: 'if0_35234194_tommyshop'
+    -->
+    <database name="if0_35234194_tommyshop">
+        <!-- Bảng administrator -->
+        <table name="administrator">
+            <column name="id">1</column>
+            <column name="name">Tạ Văn Bình</column>
+            <column name="useradmin">admin</column>
+            <column name="passadmin">12345</column>
+            <column name="role">NULL</column>
+            <column name="image">af704ac9-7ec4-4240-bfd6-6a3d31a509dc.jpg</column>
+        </table>
+        <!-- Bảng dolcegabana -->
+        <table name="dolcegabana">
+            <column name="id">1</column>
+            <column name="dgname">Knit_cardigan_with_all-over_jacquard_logo</column>
+            <column name="price">185.000.000</column>
+            <column name="info">NULL</column>
+            <column name="image">Knit_cardigan_with_all-over_jacquard_logo.png</column>
+        </table>
+        <table name="dolcegabana">
+            <column name="id">2</column>
+            <column name="dgname">Carretto-print-poplin-and-jersey-dress</column>
+            <column name="price">300.000.000</column>
+            <column name="info">NULL</column>
+            <column name="image">Carretto-print-poplin-and-jersey-dress.png</column>
+        </table>
+        <table name="dolcegabana">
+            <column name="id">3</column>
+            <column name="dgname">Jersey_hoodie_dress_with_DG_patch</column>
+            <column name="price">420.000.000</column>
+            <column name="info">NULL</column>
+            <column name="image">Jersey_hoodie_dress_with_DG_patch.png</column>
+        </table>
+        <table name="dolcegabana">
+            <column name="id">4</column>
+            <column name="dgname">Carretto print twill shirt</column>
+            <column name="price">220.000.000</column>
+            <column name="info">NULL</column>
+            <column name="image">Carretto-print_twill_shirt.png</column>
+        </table>
+        <!-- Bảng gucci -->
+        <table name="gucci">
+            <column name="id">1</column>
+            <column name="gucciname">Giày sneaker MEN_S-HIGH-TOP-MAXI-GG</column>
+            <column name="price">125.000.000</column>
+            <column name="info">NULL</column>
+            <column name="image">MEN_S-HIGH-TOP-MAXI-GG-SNEAKER.png</column>
+        </table>
+        <table name="gucci">
+            <column name="id">2</column>
+            <column name="gucciname">Giày sneaker MEN_S-MAC80</column>
+            <column name="price">100.000.000</column>
+            <column name="info">NULL</column>
+            <column name="image">MEN_S-MAC80-SNEAKER.png</column>
+        </table>
+        <table name="gucci">
+            <column name="id">3</column>
+            <column name="gucciname">Giày sneaker MEN_S_RHYTON_GUCCI_LOGO_LEATHER</column>
+            <column name="price">520.000.000</column>
+            <column name="info">NULL</column>
+            <column name="image">MEN_S_RHYTON_GUCCI_LOGO_LEATHER_SNEAKER.png</column>
+        </table>
+        <table name="gucci">
+            <column name="id">4</column>
+            <column name="gucciname">Giày sneaker MEN_S-GUCCI-RUN</column>
+            <column name="price">200.500.000</column>
+            <column name="info">NULL</column>
+            <column name="image">MEN_S-GUCCI-RUN-SNEAKER.png</column>
+        </table>
+        <!-- Bảng messages -->
+        <!-- Bảng popular-product -->
+        <!-- Bảng product -->
+        <table name="product">
+            <column name="id">1</column>
+            <column name="productname">Coated jacquard ankle boots</column>
+            <column name="price">60.000</column>
+            <column name="info">NULL</column>
+            <column name="image">Coated jacquard ankle boots.png</column>
+            <column name="type">dg</column>
+        </table>
+        <table name="product">
+            <column name="id">2</column>
+            <column name="productname">Giày Thể Thao LV Skate</column>
+            <column name="price">90.000</column>
+            <column name="info">NULL</column>
+            <column name="image">Giày Thể Thao LV Skate.png</column>
+            <column name="type"></column>
+        </table>
+        <table name="product">
+            <column name="id">3</column>
+            <column name="productname">GUCCI PORTER CABIN PLUS TROLLEY</column>
+            <column name="price">90.000.000</column>
+            <column name="info">NULL</column>
+            <column name="image">GUCCI PORTER CABIN PLUS TROLLEY.png</column>
+            <column name="type">gc</column>
+        </table>
+        <table name="product">
+            <column name="id">4</column>
+            <column name="productname">GUCCI SAVOY SMALL DUFFLE BAG</column>
+            <column name="price">75.000.000</column>
+            <column name="info">NULL</column>
+            <column name="image">GUCCI SAVOY SMALL DUFFLE BAG.png</column>
+            <column name="type">gc</column>
+        </table>
+        <table name="product">
+            <column name="id">5</column>
+            <column name="productname">Lace slingbacks</column>
+            <column name="price">55.400.000</column>
+            <column name="info">NULL</column>
+            <column name="image">Lace slingbacks.png</column>
+            <column name="type">NULL</column>
+        </table>
+        <table name="product">
+            <column name="id">6</column>
+            <column name="productname">Mũ Cói LV Crochet Stripes</column>
+            <column name="price">35.000.000</column>
+            <column name="info">NULL</column>
+            <column name="image">louis-vuitton-mũ-cói-lv-crochet-stripes-s00-mũ-và-găng-tay--M7141S_PM2_Front.png</column>
+            <column name="type">lv</column>
+        </table>
+        <table name="product">
+            <column name="id">7</column>
+            <column name="productname">Túi City Keepall</column>
+            <column name="price">92.000.000</column>
+            <column name="info">NULL</column>
+            <column name="image">Túi-City-Keepall-removebg-preview.png</column>
+            <column name="type">lv</column>
+        </table>
+        <table name="product">
+            <column name="id">8</column>
+            <column name="productname">Ví Pocket Organizer</column>
+            <column name="price">10.000.000</column>
+            <column name="info">NULL</column>
+            <column name="image">Ví-Pocket-Organizer.png</column>
+            <column name="type">lv</column>
+        </table>
+        <!-- Bảng user -->
+        <table name="user">
+            <column name="id">1</column>
+            <column name="nameuser">Tạ Văn Bình</column>
+            <column name="user">binhtommy</column>
+            <column name="pass">17092004</column>
+            <column name="email">hn6006077@gmail.com</column>
+            <column name="phone">0705222398</column>
+        </table>
+        <table name="user">
+            <column name="id">17</column>
+            <column name="nameuser">nguyen van b</column>
+            <column name="user">binhtommy123</column>
+            <column name="pass">123</column>
+            <column name="email">hn6006078@gmail.com</column>
+            <column name="phone">0705222399</column>
+        </table>
+        <table name="user">
+            <column name="id">18</column>
+            <column name="nameuser">Nguyen Van Cuong</column>
+            <column name="user">fff</column>
+            <column name="pass">11111</column>
+            <column name="email">DorothyBailey7790@hihicute.com</column>
+            <column name="phone">0123456789</column>
+        </table>
+        <table name="user">
+            <column name="id">19</column>
+            <column name="nameuser">qwer</column>
+            <column name="user">a</column>
+            <column name="pass">1</column>
+            <column name="email">20221284@eaut.edu.vn</column>
+            <column name="phone">011100202</column>
+        </table>
+        <table name="user">
+            <column name="id">20</column>
+            <column name="nameuser">qwer</column>
+            <column name="user">a</column>
+            <column name="pass">1</column>
+            <column name="email">20221284@eaut.edu.vn</column>
+            <column name="phone">011100202</column>
+        </table>
+        <table name="user">
+            <column name="id">21</column>
+            <column name="nameuser">Nam</column>
+            <column name="user">nambbi123</column>
+            <column name="pass">qwerty123</column>
+            <column name="email">gfgfgfgf@gmail.com</column>
+            <column name="phone">0898093149</column>
+        </table>
+        <table name="user">
+            <column name="id">22</column>
+            <column name="nameuser">NULL</column>
+            <column name="user">bbbbb</column>
+            <column name="pass">123</column>
+            <column name="email">DorothyBailey7790@hihicute.com</column>
+            <column name="phone">NULL</column>
+        </table>
+        <table name="user">
+            <column name="id">23</column>
+            <column name="nameuser">NULL</column>
+            <column name="user">binhdeptrai123</column>
+            <column name="pass">111</column>
+            <column name="email">binhtommy1709@gmail.com</column>
+            <column name="phone">NULL</column>
+        </table>
+        <table name="user">
+            <column name="id">24</column>
+            <column name="nameuser">NULL</column>
+            <column name="user">binhtommy12345</column>
+            <column name="pass">1111</column>
+            <column name="email">hn6006078@gmail.com</column>
+            <column name="phone">NULL</column>
+        </table>
+        <!-- Bảng users -->
+    </database>
+</pma_xml_export>
